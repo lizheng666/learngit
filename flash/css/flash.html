@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="flash.css" rel="stylesheet " type="text/css ">
+    <script type="text/javascript">
+        window.onload = function () {
+            var container = document.getElementById('container');
+            var list = document.getElementById('list');
+            var buttons = document.getElementById('buttons').getElementsByTagName('span');
+            var ht = document.getElementById('ht');
+            var qj = document.getElementById('qj');
+            var index = 1;
+            var mentor = false;
+            var jungle;
+
+            function playB() {
+                for (var i = 0;i < buttons.length; i++ ){
+                    if (buttons[i].className == 'on'){
+                        buttons[i].className = '';
+                        break;
+                    }
+                }
+                buttons[index - 1].className = 'on';
+            }
+
+            function main(variable) {
+                mentor = true;
+                var thor = parseInt(list.style.left) + variable;
+                var time = 300;
+                var interval = 10;
+                var speed = variable / (time / interval);
+
+
+                function run() {
+                    if ((speed < 0 && parseInt(list.style.left) > thor) || (speed > 0 && parseInt(list.style.left) > thor)) {
+                        list.style.left = parseInt(list.style.left) + speed + 'px';
+                        setTimeout(run, interval);
+                    }
+
+                    else {
+                        mentor = false;
+                        list.style.left = thor + 'px';
+                        if (thor > -800) {
+                            list.style.left = -5600 + 'px';
+                        }
+                        if (thor < -5600) {
+                            list.style.left = -800 + 'px';
+                        }
+                    }
+                }
+                run();
+            }
+            
+            function play() {
+                jungle = setInterval(function () {
+                    qj.onclick();
+                },3000);
+            }
+
+            function stop() {
+                clearInterval(jungle);
+            }
+
+            qj.onclick = function () {
+                if (index == 7){
+                    index = 1;
+                }
+                else {
+                    index += 1;
+                }
+                playB();
+                if (!mentor ) {
+                    main(-800);
+                }
+            }
+
+            ht.onclick = function () {
+                if (index == 1){
+                    index = 7;
+                }
+                else {
+                    index -= 1;
+                }
+                playB();
+                if (!mentor) {
+                    main(800);
+                }
+            }
+            for (var i = 0;i < buttons.length; i++){
+                buttons[i].onclick = function () {
+                    if (this.className == 'on'){
+                        return;
+                    }
+                    var myIndex = parseInt(this.getAttribute('index'));
+                    var variable = -800 * (myIndex - index);
+                    index = myIndex;
+                    playB();
+                    if (!mentor) {
+                        main(variable);
+                    }
+                }
+            }
+            container.onmouseover = stop;
+            container.onmouseout = play ;
+            play();
+        }
+    </script>
+
+</head>
+<body>
+<hr class="h1" >
+<p>♕小猫说：这是一个神奇的轮播图！→</p>
+<hr class="h2" >
+<div id="container">
+    <div id="list" style="left: -800px;">
+        <a href="../css/index1.html" ><img src="../img/index1.png"    alt="" /></a>
+        <a href="../css/index1.html" ><img src="../img/index1.png"    alt="" /></a>
+        <a href="../css/index4.html" ><img src="../img/index2.png"    alt="" /></a>
+        <a href="../css/index5.html" ><img src="../img/index3.png"    alt="" /></a>
+        <a href="../css/index6.html" ><img src="../img/index4.png"    alt="" /></a>
+        <a href="../css/index7.html" ><img src="../img/index5.png"    alt="" /></a>
+        <a href="../css/index3.html" ><img src="../img/index6.jpg"    alt="" /></a>
+        <a href="../css/index2.html" ><img src="../img/index7.png"    alt="" /></a>
+        <a href="../css/index2.html" ><img src="../img/index7.png"    alt="" /></a>
+    </div>
+    <div id="buttons" >
+        <span index="1" class="on"></span>
+        <span index="2" class></span>
+        <span index="3" class></span>
+        <span index="4" class></span>
+        <span index="5" class></span>
+        <span index="6" class></span>
+        <span index="7" class></span>
+    </div>
+    <a href="javascript:;"  class="arrow"  id="ht" >&lt;</a>
+    <a href="javascript:;"  class="arrow"  id="qj" >&gt;</a>
+</div>
+</body>
+</html>

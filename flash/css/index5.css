@@ -1,0 +1,31 @@
+.pic {
+    width: 13%;
+    height: 13%;
+    margin-top: 1%;
+    margin-left: 14%;
+}
+
+.p1 {
+    font-size: 15px;
+    color: dimgray;
+    margin-top: 11%;
+    margin-left: 14%;
+    line-height: 190%;
+    font-family: Tahoma;
+}
+
+.p2 {
+     margin-left: 14%;
+}
+
+.p3 {
+    font-size: 13px;
+    color: dimgray;
+    margin-left: 14%;
+    font-family: Tahoma;
+}
+
+body {
+    background-image: url("../img/man5.jpg");
+    background-size: cover;
+}

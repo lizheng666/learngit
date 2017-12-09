@@ -1,0 +1,52 @@
+.hire{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hire-body {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    flex: 50% 50%;
+    align-content: center;
+    margin-top: 2%;
+}
+
+
+
+.introduce {
+    order: 1;
+    width: 50%;
+    margin-left: -25%;
+}
+
+p {
+    font-size: 15px;
+    color: slategrey;
+    margin-top: 5%;
+}
+
+blockquote {
+    margin-left: 0%;
+    font-size: 18px;
+    color: dimgray;
+    margin-top: 25%;
+}
+
+button {
+    border: none;
+    width: 30%;
+    height: 45px;
+    background-color: crimson;
+    color: white;
+    font-size: 17px;
+    margin-top: 6%;
+}
+
+body {
+    background: url("../img/myself.jpg")fixed center center no-repeat;
+    background-size: cover;
+    width: 98%;
+}

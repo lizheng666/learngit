@@ -1,0 +1,95 @@
+.Process {
+    display: flex;
+   flex-direction: column;
+}
+
+header
+ {
+    flex: 1;
+    text-align: center;
+    margin-top: 7%;
+    font-size: 32px;
+}
+
+
+p{
+    text-align: center;
+    font-size: 11px;
+    margin-top: 3%;
+}
+
+
+footer{
+    flex: 1;
+    text-align: center;
+    margin-top: 10%;
+    font-size: 25px;
+}
+
+.Process-body{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    align-items: center;
+    flex-direction: row;
+    flex: 25% 25% 25% 25%;
+}
+
+.Process-main1 li{
+    list-style-type: none;
+    margin-top: 63px;
+    color: white;
+}
+
+.Process-main2 li{
+    list-style-type: none;
+    margin-top: 63px;
+    margin-left: -27px;
+    color: white;
+}
+
+.Process-main3 li{
+    list-style-type: none;
+    margin-top: 63px;
+    margin-left: -3px;
+    color: white;
+}
+
+.Process-main4 li{
+    list-style-type: none;
+    margin-top: 63px;
+    margin-left: -2px;
+    color: white;
+}
+
+
+.Process-main1{
+    width: 145px;
+    height: 145px;
+    background-color: mediumturquoise;
+    margin-top: -8%;
+}
+
+.Process-main2{
+    width: 145px;
+    height: 145px;
+    margin-left: 10px;
+    background-color: blueviolet;
+    margin-top: -8%;
+}
+
+.Process-main3{
+    width: 145px;
+    height: 145px;
+    margin-left: 10px;
+    background-color: darkblue;
+    margin-top: -8%;
+}
+
+.Process-main4{
+    width: 145px;
+    height: 145px;
+    margin-left: 10px;
+    background-color: crimson;
+    margin-top: -8%;
+}

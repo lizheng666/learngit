@@ -1,0 +1,29 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 10px;
+    font-size: 200%;
+    margin-top: 1.5%;
+}
+
+.p1 {
+    display: flex;
+    justify-content: center;
+}
+
+.h1 {
+    width: 22%;
+    margin-top: 18%;
+    color: black;
+}
+
+.h2 {
+    width: 22%;
+    color: black;
+}
+
+body {
+    background: url("../img/i.jpg") fixed center center no-repeat;
+    background-size: cover;
+    width: 99%;
+}
